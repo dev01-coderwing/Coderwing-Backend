@@ -10,6 +10,12 @@ logs
 *.log
 " >> .gitignore
 
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
 # 2. Pehle se track ho rahi cheeze untrack karo
 git rm -r --cached node_modules
 git rm --cached .env
