@@ -7,7 +7,7 @@ export const sendEmail = async (req, res) => {
     await transporter.sendMail({
       from: `"Website Inquiry" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
-      subject: `🚀 New Course Inquiry from ${name}`,
+      subject: ` New Course Inquiry from ${name}`,
 
       // ✅ Dark Theme HTML Email
       html: `
