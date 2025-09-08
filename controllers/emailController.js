@@ -9,7 +9,6 @@ export const sendEmail = async (req, res) => {
       to: process.env.EMAIL_USER,
       subject: ` New Course Inquiry from ${name}`,
 
-      // ✅ Dark Theme HTML Email
       html: `
         <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
                     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
@@ -48,9 +47,9 @@ export const sendEmail = async (req, res) => {
       `,
     });
 
-    res.status(200).json({ success: true, message: "✅ Dark theme inquiry email sent!" });
+    res.status(200).json({ success: true, message: "inquiry email sent!" });
   } catch (error) {
-    console.error("❌ Email error:", error);
+    console.error(" Email error:", error);
     res.status(500).json({ success: false, error: error.message });
   }
 };
