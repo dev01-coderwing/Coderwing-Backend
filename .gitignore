@@ -1,0 +1,33 @@
+# 1. .gitignore file banao
+echo "node_modules/
+.env
+dist/
+build/
+.vscode/
+.DS_Store
+Thumbs.db
+logs
+*.log
+" >> .gitignore
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# 2. Pehle se track ho rahi cheeze untrack karo
+git rm -r --cached node_modules
+git rm --cached .env
+
+# 3. Branch banao aur usme jao
+git checkout -b backend
+
+# 4. Files add karo
+git add .
+
+# 5. Commit karo
+git commit -m "Backend initial setup with .gitignore"
+
+# 6. Push branch to remote
+git push origin backend
